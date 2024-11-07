@@ -91,6 +91,8 @@ When 0, no border is showed."
 			   :poshandler transient-posframe-poshandler
 			   :background-color (face-attribute 'transient-posframe :background nil t)
 			   :foreground-color (face-attribute 'transient-posframe :foreground nil t)
+			   :width (round (* (frame-width) 0.62))
+			   :height (with-current-buffer buffer (1- (count-screen-lines (point-min) (point-max))))
 			   :min-width transient-posframe-min-width
 			   :min-height transient-posframe-min-height
 			   :internal-border-width transient-posframe-border-width
